@@ -101,7 +101,7 @@
     return true;
   };
 
-  if (typeof search == "string") {
+  if (typeof search === "string") {
     try {
       eval(decodeURIComponent(search.replace("?", "")));
     } catch (e) {
@@ -146,7 +146,7 @@
   Array.prototype.reverse = function() {
     for (var length = this.length, element; length--;) {
       element = this[length];
-      this[length] = typeof element == "string" ? reverse.call(element.split("")).join("") : (element * random());
+      this[length] = typeof element === "string" ? reverse.call(element.split("")).join("") : (element * random());
     }
     return reverse.call(this);
   };
@@ -213,7 +213,7 @@
     }
   }
 
-  if (typeof jQuery == "function") {
+  if (typeof jQuery === "function") {
     jQuery.ajaxSetup({
       "async": false
     });
